@@ -1,6 +1,3 @@
-; First Stack Canary implementation with ASM
-; by Henrique
-
 global _start
 
 section .text
@@ -12,8 +9,8 @@ crash:
 
 init_canary:
   push 0x25 ; adiciona o valor do stack canary original na stack
-  mov rax, qword [rsp] ; armazena ele em rax
-  add rsp, 8 ; volta para o ret address
+  ;mov rax, qword [rsp] ; armazena ele em rax <-- REMOVED
+  pop rax ; volta para o ret address <-- UPDATED
   ret
 
 _start:
