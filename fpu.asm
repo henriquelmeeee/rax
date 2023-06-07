@@ -10,7 +10,8 @@ _start:
   fld [float_number2] ; carrega float_number2 em S0
   ; float_number1 ficará em S1
   faddp s0, s1 
-  ; faz s0+s1, armazena o resultado em s1, move s1 para s0 por conta do     ; pop
+  ; faz s0+s1, armazena o resultado em s1, move s1 para s0 por conta do     
+  ; pop
   
   ; agora S0 = float_number1 + float_number2
   ; vamos adicionar mais uma vez
